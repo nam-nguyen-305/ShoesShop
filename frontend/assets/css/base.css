@@ -1,0 +1,224 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+
+    --border-color: #dbdbdb;
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    /* HACK */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__fullwidth{
+    width: 100%;
+}
+.grid__row{
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.grid__column-2{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.667%;
+}
+.grid__column-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.333%;
+}
+.grid__column-0-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+  
+}
+.grid__column-1-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+    
+}
+.grid__column-3-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+.grid__column-4-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+.btn {
+    display: inline-flex;
+}
+
+/* Selection */
+.select-input {
+    z-index: 2;
+    position: relative;
+    min-width: 210px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1px;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    border-radius: 2px;
+    background-color: var(--while-color);
+    padding: 8px 16px;
+    list-style: none;
+    display: none;
+}
+
+.select-input__link {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
+}
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+
+
+/* Button style */
+.btn{
+    min-width: 142px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+}
+
+.btn.btn--normal:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--size-s{
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+/* Nếu Muốn vô hiệu hóa nút thì dùng chỗ này */
+.btn.btn--disabled {
+    color: #949494;
+    cursor: default;
+    background-color: #c3c3c3;
+}
+
+
+
+/* pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .pagination-item {
+    
+}
+
+.pagination-item--active .pagination-item__link {
+    
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    
+} */
+
+.pagination-item__link {
+    text-decoration: none;
+    font-size: 1.6rem;
+    
+}
+
+/* .pagination-item__icon {
+
+} */
